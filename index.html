@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>js1t</title>
+  <style>
+
+    #kp1 {
+      font-size: 15px;
+    }
+
+    * {
+      /* background-image: url("IMG_20230502_155117_347.webp"); */
+      /* background-size:contain; */
+      background-color: rgb(255, 0, 149);
+
+    }
+
+    input{
+      width: 50px;
+      height: 50px;
+      margin: 10px 100px 10px 50px;
+      text-align: center;
+     background-color: chartreuse;
+      margin: center;
+      grid: 50px;
+
+    }
+    .kp2 input{ margin: 10px 110px  10px;
+     
+      justify-content: center;
+      font-size: 20px;
+      color: brown;
+      font-weight: bold;
+      border-radius: 5px;
+      border-color: aqua;
+      position:relative;
+      left: 150px;
+      top: 200px;
+ 
+ 
+
+    }
+
+    .label{ position: relative;
+      top: 145px;
+      left: 318px;
+      /* font-size: 20px; */
+      margin-top: 14px;
+      font-weight: bold;
+      font-size: 17px;
+      background-color: white;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .kp1 button{
+      
+    
+    position: relative;
+    top: 10px;
+    left: 150px;
+    margin:5px 5px;
+    padding: 20px;
+    font: 15px;
+
+
+    }
+    
+    #label1{
+      left: 329px;
+    }
+    #label2{
+      position: relative;
+      left: 327px;
+    }
+
+    h1{  
+      text-align: center;
+
+      justify-content: center;
+    }
+    button{
+      margin-top: 265px;
+   padding: 9px 11px;
+   margin-left: 45.7%;
+   justify-content: center;
+   text-align: center;
+   font-size: 16px;
+   /* background-color: #8386105; */
+   align-items: center;
+   border-radius: 5px;
+   width: 25%px;
+   font-weight: 600;
+   background-color: chartreuse;
+   left: 30px;
+   position: relative;
+    }
+
+    #heading
+    { 
+      position: relative;
+      top: 95px;
+      background-color: aliceblue;
+      width: 30%;
+      display: block;
+      margin: auto;
+      padding: 12px;
+      left: 15px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- <h1>Hello kp we going to learn javascript</h1> -->
+
+  
+  
+
+  
+  
+  <h1 id="heading">DIGITAL CLOCK</h1>
+  <div class="kp2">
+     <label for="" class="label">Hour</label>
+    <input type="text" id="kp" placeholder="hkp" value="00PM">
+    <label for="" class="label" id="label1">Minutes</label>
+    <input type="text" id="mn1" placeholder="Minutes" value="1">
+    <label for="" class="label" id="label2">seconds</label>
+    <input type="text" id="sec1" placeholder="seconds" value="2">
+
+  </div>
+  <div class="kp">
+    <button onclick="time()" id="kp1" readonly>CHECK TIME</button>
+   
+  </div>
+</body>
+<script>
+
+ 
+ 
+
+ 
+
+  // document.getElementsByName('kp1').style.fontsize = '50';
+  // 
+  // console.error("this is error kalpa");
+  // console.warn("this is warning kalpa");
+  // console.log("hello print thay che ne bhai" ,7+7, "kalpa");
+
+  // var num1=7;
+  // var num2=7;
+  // 
+  // console.log("sum of num1 & num2 is : ",num1,num2);
+
+  // var num1 = "kalpesh ";
+  // var num2 = "rohit";
+  // 
+  // console.log("sum of num1 & num2 is : ", num1 , num2);
+
+
+  // var a=true;
+  // var b= false;
+  // 
+  // document.write(a ,b);
+  // console.log(a ,b);
+
+
+   
+ 
+   
+
+  // confirm("have u procced with this ?")
+
+
+    // var kp="hello kalpa how r u";
+  /*  document.write("kp you dou it");*/
+
+
+  // 
+   
+     
+     
+  function time()
+  {
+
+
+      //document.write("todays's date is \n ",  mydate.getDate());
+   
+
+    let mydate = new Date();
+
+
+    var hr = mydate.getHours();
+    var mn = mydate.getMinutes();
+    var sec = mydate.getSeconds();
+    
+
+
+    let inputs = document.querySelectorAll("input");
+
+    
+    if(hr>12)
+    {
+      hr=hr-12+'PM';
+    }
+    else{
+      hr=hr+'AM';
+    }
+  // console.log(hr);
+
+ 
+    inputs[0].value=hr;
+    inputs[1].value = mn;
+
+    inputs[2].value = sec;
+
+    
+    
+  
+
+  
+    setInterval(time, 1000); 
+
+  }
+
+       
+  // inputs[0].value=hr;
+
+
+  // 
+  //1000means mili seconds afterr time function Automatically called.
+
+  // document.getElementById('kp1').addEventListener('click',setInterval(time,1000));
+
+  //  time();
+
+
+
+
+
+
+
+</script>
+
+</html>
